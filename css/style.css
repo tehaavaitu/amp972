@@ -839,6 +839,10 @@ main {
   margin-bottom: 0;
 }
 
+.profile-block .mission-value {
+  color: blue; /* Changez la couleur du texte en bleu ou la couleur de votre choix */
+}
+
 
 /*  SLIDER A PROPOS CHANGEMENT D IMAGES AU CLICK */
 
