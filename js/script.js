@@ -7,6 +7,14 @@
     $(".navbar-collapse").collapse('hide');
   });
 
+  const navbarToggler = document.getElementById("navbar-toggler");
+
+       // Ajoutez un écouteur d'événements pour le clic
+  // navbarToggler.addEventListener("click", function (event) {
+       // Empêchez le comportement par défaut du clic (développement du menu)
+  //   event.preventDefault();
+  // });
+
   // LIENS Défilement fluide
   $('.smoothscroll').click(function () {
     var el = $(this).attr('href');
@@ -101,17 +109,6 @@ function changer(id) {
   }
 }
 
-
-function changer(id) {
-  let e = document.getElementById(id);
-  if (e.getAttribute("type") === "password") {
-    e.setAttribute("type", "text");
-    document.getElementById("eye" + id).src = "../images/logos/greenEye.png";
-  } else {
-    e.setAttribute("type", "password");
-    document.getElementById("eye" + id).src = "../images/logos/redEye.png";
-  }
-}
 
 
 
