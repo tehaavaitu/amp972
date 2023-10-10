@@ -439,7 +439,7 @@ main {
 }
 
 /*  BANNIERE des differentes pages  */
-.hero-section .animated1, .hero-section1 .animated1, .hero-section2 .animated1, .hero-section3 .animated1, .hero-section4 .animated1, .hero-section5 .animated1 {
+.hero-section .animated1, .hero-section1 .animated1, .hero-section2 .animated1, .hero-section3 .animated1, .hero-section4 .animated1, .hero-section5 .animated1, .hero-section6 .animated1 {
   margin-top: 80px;
   background-color: rgba(38, 30, 117, 0.5); 
   -webkit-background-clip: text;
@@ -447,7 +447,7 @@ main {
   font-family: 'Arial', sans-serif;
 }
 
-.hero-section .animated2, .hero-section1 .animated2, .hero-section2 .animated2, .hero-section3 .animated2, .hero-section4 .animated2, .hero-section5 .animated2 {
+.hero-section .animated2, .hero-section1 .animated2, .hero-section2 .animated2, .hero-section3 .animated2, .hero-section4 .animated2, .hero-section5 .animated2, .hero-section6 .animated2 {
   background-color: rgba(0, 0, 0, 0.5); 
   color: #fff;
   padding: 10px 20px;
@@ -465,6 +465,7 @@ main {
 }
 
 .hero-section1 {
+  position: relative;
   background-image: url('../images/port/port6.png'), linear-gradient(#348CD2, #FFFFFF);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -474,6 +475,7 @@ main {
 }
 
 .hero-section2 {
+  position: relative;
   background-image: url('../images/port/port7.png'), linear-gradient(#348CD2, #FFFFFF);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -492,6 +494,7 @@ main {
 }
 
 .hero-section4 {
+  position: relative;
   background-image: url('../images/port/port11.png'), linear-gradient(#348CD2, #FFFFFF);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -507,6 +510,16 @@ main {
   background-position: top;
   padding-top: 10px;
   height: 70vh;
+}
+
+.hero-section6 {
+  position: relative;
+  background-image: url('../images/port/port9.png'), linear-gradient(#348CD2, #FFFFFF);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  padding-top: 10px;
+  height: 100vh;
 }
 
 .custom-carousel {
@@ -618,6 +631,34 @@ main {
   background: var(--secondary-color);
 }
 
+/* FISH */
+#poisson {
+  position: absolute;
+  opacity: 0.5;
+  animation: nager 10s linear forwards, rotation 2s alternate infinite;
+}
+
+@keyframes nager {
+  0% {
+      left: -10%;
+      top: 70%;
+      transform: translateY(0) rotate(0);
+  }
+  100% {
+      left: 110%;
+      top: 70%;
+      transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0%, 100% {
+      transform: translateY(0) rotate(0deg);
+  }
+  50% {
+      transform: translateY(0) rotate(180deg);
+  }
+}
 
 /*  BLOCK */
 .custom-block {
