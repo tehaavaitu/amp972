@@ -122,3 +122,43 @@ function changer(id) {
     document.getElementById(eyeId).src = "assets/images/logos/redEye.png";
   }
 }
+
+
+// FORMULAIRE DE CONNEXION
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector("form"); // Sélectionnez le formulaire de connexion
+
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêchez la soumission du formulaire par défaut
+
+    // Récupérez l'email et le mot de passe de l'utilisateur (vous devrez ajouter des sélecteurs appropriés)
+    const email = document.querySelector(".email").value;
+    const password = document.querySelector(".password").value;
+
+    // Simulez la vérification de l'utilisateur (vous devrez personnaliser cette logique)
+    if (email === "admin@amp.fr" && password === "adminAmp") {
+      // L'utilisateur est authentifié en tant qu'administrateur.
+      window.location.href = "dashboard.html";
+    } else if (email === "user@amp.fr" && password === "userAmp") {
+      // L'utilisateur est authentifié en tant qu'utilisateur standard.
+      window.location.href = "new_page.html";
+    } else {
+      // L'authentification a échoué. Redirigez l'utilisateur vers "login.html".
+      window.location.href = "login.html";
+    }
+  });
+});
+
+
+// DECONNEXION
+document.addEventListener("DOMContentLoaded", function () {
+  const logoutButton = document.getElementById("logoutButton");
+
+  // Écoutez le clic sur le bouton de déconnexion
+  logoutButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Empêchez le lien de déclencher une action par défaut
+
+    // Simulez la déconnexion en redirigeant l'utilisateur vers une page de déconnexion ou une autre page
+    window.location.href = "login.html";
+  });
+});
