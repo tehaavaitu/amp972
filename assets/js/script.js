@@ -19,20 +19,19 @@
     return false;
 
     function scrollToDiv(element, navheight) {
-        var offset = element.offset();
-        var offsetTop = offset.top;
-        var totalScroll = offsetTop - 0;
+      var offset = element.offset();
+      var offsetTop = offset.top;
+      var totalScroll = offsetTop - 0;
 
-        // Utilise une animation pour faire défiler jusqu'à l'élément cible
-        $("body,html").animate(
-            {
-                scrollTop: totalScroll,
-            },
-            300
-        );
+      // Utilise une animation pour faire défiler jusqu'à l'élément cible
+      $("body,html").animate(
+        {
+          scrollTop: totalScroll,
+        },
+        300
+      );
     }
-});
-
+  });
 
   // CAROUSEL plugin jQuery, carrousel réactif avec un nombre d'éléments variable en fonction de la taille de l'écran et inclut des fonctionnalités telles que le centrage, la boucle, les marges et la lecture automatique
   $(document).ready(function () {
@@ -59,17 +58,17 @@
 
 // defilement poisson
 const poisson = document.getElementById("poisson");
-        poisson.addEventListener("animationiteration", () => {
-            // À chaque itération de l'animation (une fois qu'elle est terminée),
-            // choisissez une nouvelle position verticale aléatoire pour le poisson.
-            const randomTop = Math.random() * 60 + 20; // Position verticale aléatoire entre 20% et 80% de la hauteur de la fenêtre.
-            poisson.style.top = `${randomTop}%`;
-        });
+poisson.addEventListener("animationiteration", () => {
+  // À chaque itération de l'animation (une fois qu'elle est terminée),
+  // choisissez une nouvelle position verticale aléatoire pour le poisson.
+  const randomTop = Math.random() * 60 + 20; // Position verticale aléatoire entre 20% et 80% de la hauteur de la fenêtre.
+  poisson.style.top = `${randomTop}%`;
+});
 
-        poisson.addEventListener("animationend", () => {
-            // L'animation est terminée, supprimer l'élément du DOM
-            poisson.remove();
-        });
+poisson.addEventListener("animationend", () => {
+  // L'animation est terminée, supprimer l'élément du DOM
+  poisson.remove();
+});
 
 // TOP BUTTON
 // Sélectionnez l'élément du bouton de retour en haut par son ID.
@@ -84,8 +83,8 @@ window.addEventListener("scroll", toggleScrollButtonVisibility);
 // Cette fonction anime le défilement de la page vers le haut.
 function scrollToTop() {
   window.scrollTo({
-    top: 0,         // Défilez jusqu'en haut de la page.
-    behavior: "smooth",  // avec un défilement en douceur.
+    top: 0, // Défilez jusqu'en haut de la page.
+    behavior: "smooth", // avec un défilement en douceur.
   });
 }
 
@@ -103,7 +102,6 @@ function toggleScrollButtonVisibility() {
     scrollButton.style.visibility = "hidden";
   }
 }
-
 
 // FORMULAIRE DE CONTACT
 // Sélectionnez l'élément du menu déroulant avec l'ID "subject" et ajoutez un écouteur d'événements pour le changement de valeur.
@@ -123,12 +121,11 @@ document.getElementById("subject").addEventListener("change", function () {
   }
 });
 
-
 // AFFICHAGE MOT DE PASSE
 function changer(id) {
   // Sélectionnez l'élément d'entrée de texte avec l'ID fourni en paramètre.
   let e = document.getElementById(id);
-  
+
   // Générez l'ID de l'icône de l'œil associée à cet élément.
   let eyeId = "eye" + id;
 
@@ -147,5 +144,3 @@ function changer(id) {
     document.getElementById(eyeId).src = "assets/images/logos/redEye.png";
   }
 }
-
-
