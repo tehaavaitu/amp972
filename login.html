@@ -27,7 +27,7 @@
 <body>
   <div class="container">
     <div class="login-box">
-      <form action="">
+      <form action="" id="login-form">
         <div class="page-box">
           <div class="login-title">
             <a href="index.html"><img src="assets/images/logos/logo1.png" alt="Logo de l'association"
@@ -39,7 +39,7 @@
 
           <div class="page email-page">
             <div class="input-box">
-              <input type="text" class="email" autofocus required />
+              <input type="text" class="email" id="username" autofocus required />
               <label>Entrez votre email</label>
             </div>
 
@@ -67,6 +67,49 @@
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/prefixfree.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+    
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('passLog').value;
+    
+      // Vérifiez les identifiants (ici, admin/admin pour l'exemple).
+      if (username === 'admin' && password === 'admin') {
+        // Redirigez l'administrateur vers la section souhaitée de la page index.html.
+        window.location.href = 'index.html#admin-editable-section';
+      } else {
+        alert('Identifiants incorrects. Veuillez réessayer.');
+      }
+    });
+    
+    // Détecter si l'administrateur est en mode d'édition.
+const sectionAnchor = window.location.hash;
+if (sectionAnchor === '#admin-editable-section') {
+  // Activer le mode d'édition en cliquant sur un bouton "Modifier".
+  const editButton = document.getElementById('edit-button');
+  const saveButton = document.getElementById('save-button');
+  const contentToEdit = document.getElementById('content-to-edit');
+
+  editButton.addEventListener('click', function () {
+    contentToEdit.contentEditable = 'true'; // Rendre le contenu éditable.
+    editButton.style.display = 'none'; // Masquer le bouton "Modifier".
+    saveButton.style.display = 'block'; // Afficher le bouton "Enregistrer".
+  });
+
+  saveButton.addEventListener('click', function () {
+    // Enregistrer les modifications.
+    const editedContent = contentToEdit.innerHTML;
+    // Envoyer les modifications au serveur ou effectuer toute action nécessaire.
+    
+    contentToEdit.contentEditable = 'false'; // Désactiver le mode d'édition.
+    saveButton.style.display = 'none'; // Masquer le bouton "Enregistrer".
+    editButton.style.display = 'block'; // Afficher le bouton "Modifier".
+  });
+}
+
+
+  </script>
 </body>
 
 </html>

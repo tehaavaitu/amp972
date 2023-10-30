@@ -42,18 +42,13 @@
       autoplay: true,
       responsiveClass: true,
       responsive: {
-        0: {
-          items: 2,
-        },
-        767: {
-          items: 3,
-        },
-        1200: {
-          items: 4,
-        },
+        0: {items: 2,},
+        767: {items: 3,},
+        1200: {items: 4,},
       },
     });
   });
+  
 })(jQuery);
 
 // defilement poisson
