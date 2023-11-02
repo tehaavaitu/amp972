@@ -48,16 +48,38 @@
       },
     });
   });
+
+  $(document).ready(function(){
+    $("#image-carousel").owlCarousel({
+      items: 8,
+      loop: false,
+      margin: 3, 
+      nav: false,
+      navText: ["", ""], 
+      responsive:{
+        0:{
+          items: 2 
+        },
+        600:{
+          items: 4
+        },
+        1000:{
+          items: 8
+        }
+      }
+    });
+  });
+  
+
+
   
 })(jQuery);
 
 // defilement poisson
 const poisson = document.getElementById("poisson");
 poisson.addEventListener("animationiteration", () => {
-  // À chaque itération de l'animation (une fois qu'elle est terminée),
-  // choisissez une nouvelle position verticale aléatoire pour le poisson.
-  const randomTop = Math.random() * 60 + 20; // Position verticale aléatoire entre 20% et 80% de la hauteur de la fenêtre.
-  poisson.style.top = `${randomTop}%`;
+  const randomRotation = Math.random() * 60 + 20; // Rotation aléatoire entre 20 et 40 degrés
+  poisson.style.transform = `rotate(${randomRotation}deg)`;
 });
 
 poisson.addEventListener("animationend", () => {

@@ -486,6 +486,14 @@ main {
   opacity: 1;
 }
 
+.owl-carousel .item_info img {
+  width: 100px; 
+  height: auto;
+  margin: 0;
+  padding: 0; 
+}
+
+
 .owl-carousel-info-wrap {
   border-radius: 20px;
   position: relative;
@@ -585,7 +593,7 @@ main {
   100% {
       left: 110%;
       top: 70%;
-      transform: translateY(0) rotate(360deg);
+      transform: translateY(0) rotate(180deg);
   }
 }
 
@@ -594,7 +602,7 @@ main {
       transform: translateY(0) rotate(0deg);
   }
   50% {
-      transform: translateY(0) rotate(180deg);
+      transform: translateY(0) rotate(45deg);
   }
 }
 
