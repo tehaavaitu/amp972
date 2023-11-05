@@ -78,7 +78,7 @@
 // defilement poisson
 const poisson = document.getElementById("poisson");
 poisson.addEventListener("animationiteration", () => {
-  const randomRotation = Math.random() * 60 + 20; // Rotation aléatoire entre 20 et 40 degrés
+  const randomRotation = Math.random() * 60 + 20; 
   poisson.style.transform = `rotate(${randomRotation}deg)`;
 });
 
@@ -91,30 +91,27 @@ poisson.addEventListener("animationend", () => {
 // Sélectionnez l'élément du bouton de retour en haut par son ID.
 const scrollButton = document.getElementById("scroll-to-top-button");
 
-// Ajoutez un écouteur d'événements pour le clic sur le bouton de retour en haut.
+// Ajoutez un écouteur d'événements lors du clic sur le bouton de retour en haut.
 scrollButton.addEventListener("click", scrollToTop);
 
-// Ajoutez un écouteur d'événements pour le défilement de la fenêtre.
+// Ajoutez un écouteur d'événements lors du défilement de la fenêtre.
 window.addEventListener("scroll", toggleScrollButtonVisibility);
 
 // Cette fonction anime le défilement de la page vers le haut.
 function scrollToTop() {
   window.scrollTo({
-    top: 0, // Défilez jusqu'en haut de la page.
-    behavior: "smooth", // avec un défilement en douceur.
+    top: 0, 
+    behavior: "smooth", 
   });
 }
 
 // Cette fonction gère la visibilité du bouton de retour en haut en fonction du défilement.
 function toggleScrollButtonVisibility() {
-  console.log("toggleScrollButtonVisibility called"); // Un message pour le débogage.
 
   if (window.scrollY > 100) {
-    // Si la position de défilement est supérieure à 100 pixels, le bouton est rendu visible.
     scrollButton.style.opacity = "1";
     scrollButton.style.visibility = "visible";
   } else {
-    // Sinon, le bouton est rendu invisible.
     scrollButton.style.opacity = "0";
     scrollButton.style.visibility = "hidden";
   }
