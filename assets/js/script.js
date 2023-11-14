@@ -1,7 +1,7 @@
 (function ($) {
   "use strict";
 
-  // Lorsqu'un lien dans le menu de navigation est cliqué, le menu est réduit.
+
   $(".navbar-collapse a").on("click", function () {
     $(".navbar-collapse").collapse("hide");
   });
