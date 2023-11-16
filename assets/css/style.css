@@ -809,7 +809,7 @@ main {
 }
 
 .large-block .mission-value {
-  color: blue; /* Changez la couleur du texte en bleu ou la couleur de votre choix */
+  color: blue; 
 }
 
 
@@ -943,6 +943,7 @@ border-radius: 15px;}
 
 /*  PARALLAX des differentes pages */
 /*parallax accueil*/
+
 .appel-action {
   background: url(../images/parallax/bg-04.jpg);
   background-attachment: fixed;
@@ -952,6 +953,8 @@ border-radius: 15px;}
   text-align: center;
   padding: 80px 0;
 }
+
+
 /*parallax apropos*/
 .appel-action1 {
   background: url(../images/parallax/bg-03.jpg);
@@ -1381,10 +1384,4 @@ border-radius: 15px;}
   }
 }
 
-@media screen and (max-width: 414px) {
-  .search-form {
-    max-width: 200px;
-  }
-
-}
 

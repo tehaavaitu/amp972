@@ -1,12 +1,12 @@
 (function ($) {
   "use strict";
 
-
+  // Lorsqu'un lien dans le menu de navigation est cliqué, le menu est réduit.
   $(".navbar-collapse a").on("click", function () {
     $(".navbar-collapse").collapse("hide");
   });
 
-  const navbarToggler = document.getElementById("navbar-toggler");
+  var navbarToggler = document.getElementById("navbar-toggler");
 
   // Défilement fluide
   $(".smoothscroll").click(function () {
@@ -42,54 +42,50 @@
       autoplay: true,
       responsiveClass: true,
       responsive: {
-        0: {items: 2,},
-        767: {items: 3,},
-        1200: {items: 4,},
+        0: { items: 2 },
+        767: { items: 3 },
+        1200: { items: 4 },
       },
     });
   });
 
-  $(document).ready(function(){
+  $(document).ready(function () {
     $("#image-carousel").owlCarousel({
       items: 8,
       loop: false,
-      margin: 3, 
+      margin: 3,
       nav: false,
-      navText: ["", ""], 
-      responsive:{
-        0:{
-          items: 2 
+      navText: ["", ""],
+      responsive: {
+        0: {
+          items: 2,
         },
-        600:{
-          items: 4
+        600: {
+          items: 4,
         },
-        1000:{
-          items: 8
-        }
-      }
+        1000: {
+          items: 8,
+        },
+      },
     });
   });
-  
-
-
-  
 })(jQuery);
 
 // defilement poisson
-const poisson = document.getElementById("poisson");
+
+var poisson = document.getElementById("poisson");
 poisson.addEventListener("animationiteration", () => {
-  const randomRotation = Math.random() * 60 + 20; 
+  var randomRotation = Math.random() * 60 + 20;
   poisson.style.transform = `rotate(${randomRotation}deg)`;
 });
 
 poisson.addEventListener("animationend", () => {
-  // L'animation est terminée, supprimer l'élément du DOM
   poisson.remove();
 });
 
 // TOP BUTTON
 // Sélectionnez l'élément du bouton de retour en haut par son ID.
-const scrollButton = document.getElementById("scroll-to-top-button");
+var scrollButton = document.getElementById("scroll-to-top-button");
 
 // Ajoutez un écouteur d'événements lors du clic sur le bouton de retour en haut.
 scrollButton.addEventListener("click", scrollToTop);
@@ -100,14 +96,13 @@ window.addEventListener("scroll", toggleScrollButtonVisibility);
 // Cette fonction anime le défilement de la page vers le haut.
 function scrollToTop() {
   window.scrollTo({
-    top: 0, 
-    behavior: "smooth", 
+    top: 0,
+    behavior: "smooth",
   });
 }
 
 // Cette fonction gère la visibilité du bouton de retour en haut en fonction du défilement.
 function toggleScrollButtonVisibility() {
-
   if (window.scrollY > 100) {
     scrollButton.style.opacity = "1";
     scrollButton.style.visibility = "visible";
